@@ -1,0 +1,144 @@
+body {
+    font-family:  Arial, Helvetica, sans-serif;
+    font-size: 0.8rem;
+    background-color: #111;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-attachment: fixed;
+}
+
+.wrapper {
+    max-width: 40rem;
+    margin: 0 auto;
+}
+
+#search-form {
+    margin: 2rem auto;
+}
+
+#search-form .form-row {
+    display: flex;
+    flex-wrap: nowrap;
+    margin: 0.25rem;
+}
+
+#search-form .form-row:focus-within {
+    box-shadow: 0 0 1rem lawngreen;
+}
+
+#search-form .form-row label {
+    color: white;
+}
+
+#search-form .form-row input {
+    font-family:  Arial, Helvetica, sans-serif;
+    border: 0;
+    border-radius: 0;
+    transition: all 0.2s ease;
+}
+
+#search-form .form-row input[type="search"] {
+    flex-grow: 1;
+    flex-shrink: 0;
+    flex-basis: auto;
+    padding: 1rem;
+}
+
+#search-form .form-row input[type="search"]:focus {
+    outline: none;
+    box-shadow: none;
+    border: none;
+}
+
+#search-form .form-row input[type="submit"] {
+    flex-shrink: 1;
+    flex-grow: 0;
+    flex-basis: auto;
+    padding: 1rem 2rem;
+    appearance: none;
+    background: lawngreen;
+    color: white;
+    cursor: pointer;
+}
+
+#search-form .form-row input[type="submit"]:hover,
+#search-form .form-row input[type="submit"]:focus,
+#search-form .form-row input[type="submit"]:active {
+    background: forestgreen;
+}
+
+#search-heading {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+#search-heading h1 {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: white;
+}
+
+#search-results {
+}
+
+.movie {
+    padding: 2rem;
+    box-shadow: 0 0 5px #CCC;
+    margin-bottom: 1rem;
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+    position: relative;
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+
+.movie:before {
+    content: '';
+    background: rgba(255,255,255,0.9);
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+.movie-image {
+    z-index: 10;
+    width: 25%;
+    flex-basis: 25%;
+    max-width: 25%;
+}
+
+.movie-image img {
+    width: 100%;
+}
+
+.movie-text {
+    z-index: 10;
+    width: 75%;
+    flex-basis: 75%;
+    max-width: 75%;
+    padding-left: 1rem;
+    box-sizing: border-box;
+}
+
+.movie-text h2 {
+    font-size: 1.25rem;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+}
+
+.movie-text .date {
+    display: block;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: #999;
+    margin-bottom: 1rem;
+}
+
+.movie-text p {
+    line-height: 1.4;
+}
